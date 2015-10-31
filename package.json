@@ -1,0 +1,31 @@
+{
+  "name": "minimal-react-starter",
+  "version": "0.0.1",
+  "description": "Minimal react starter project using webpack-dev-server.",
+  "main": "js/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base=www --hot --inline --watch --config=webpack.config.js"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "minimal",
+    "starter"
+  ],
+  "author": "Andrew H Farmer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahfarmer/minimal-react-starter.git"
+  },
+  "dependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-loader": "^5.3.3",
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
