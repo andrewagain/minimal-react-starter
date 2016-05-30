@@ -1,13 +1,18 @@
 var path = require('path');
+var webpack = require('webpack');
 var projectRoot = __dirname;
 
 var config = {
-  // Must be an absolute path or watching feature will fail
-  context: path.join(projectRoot, 'js'),
-  entry: './index.js',
+  context: path.join(projectRoot, 'src'),
+  entry: [
+    './index.js',
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080/',
+  ],
   output: {
     path: path.join(projectRoot, 'html'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     loaders: [
@@ -24,5 +29,8 @@ var config = {
       path.join(projectRoot, 'node_modules'),
     ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
 module.exports = config;

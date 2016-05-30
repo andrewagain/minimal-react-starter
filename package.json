@@ -1,10 +1,10 @@
 {
   "name": "minimal-react-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimal react starter project using webpack-dev-server.",
   "main": "js/index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base=www --hot --inline --watch --config=webpack.config.js"
+    "start": "node server.js"
   },
   "keywords": [
     "react",
@@ -20,12 +20,12 @@
     "url": "git://github.com/ahfarmer/minimal-react-starter.git"
   },
   "dependencies": {
-    "babel": "^5.8.29",
-    "babel-core": "^5.8.29",
-    "babel-loader": "^5.3.3",
-    "react": "^0.14.1",
-    "react-dom": "^0.14.1",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
