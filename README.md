@@ -26,11 +26,9 @@ npm install
 Usage
 ---
 
-```
-node server.js
-```
+1. `node server.js`
 
-Open [http://localhost:3000/](http://localhost:3000/).
+2. Open [http://localhost:3000/](http://localhost:3000/).
 
 
 
