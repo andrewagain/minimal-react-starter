@@ -1,11 +1,8 @@
-/**
- * Hello
- */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './HelloWorld';
+import Counter from './Counter';
 
 ReactDOM.render(
-  React.createElement(HelloWorld),
+  React.createElement(Counter),
   document.getElementById('mount')
 );

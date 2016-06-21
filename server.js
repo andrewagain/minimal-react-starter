@@ -1,17 +1,25 @@
-var WebpackDevServer = require('webpack-dev-server');
+var express = require('express');
+var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpack = require('webpack');
-var config = require('./webpack.config.js');
+var webpackConfig = require('./webpack.config.js');
+var app = express();
 
-var compiler = webpack(config);
-var server = new WebpackDevServer(compiler, {
-  contentBase: 'www',
+var compiler = webpack(webpackConfig);
+
+app.use(express.static(__dirname + '/www'));
+
+app.use(webpackDevMiddleware(compiler, {
   hot: true,
   filename: 'bundle.js',
   publicPath: '/',
   stats: {
     colors: true,
   },
-});
-server.listen(8080, 'localhost', () => {
-  console.log('Server started, webpack is compiling...');
+  historyApiFallback: true,
+}));
+
+var server = app.listen(3000, function() {
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log('Example app listening at http://%s:%s', host, port);
 });

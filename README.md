@@ -23,7 +23,7 @@ Usage
 node server.js
 ```
 
-Open [http://localhost:8080/](http://localhost:8080/).
+Open [http://localhost:3000/](http://localhost:3000/).
 
 
 
@@ -52,6 +52,5 @@ More Details
 
 * No CSS. For experiments or tests, put your styles in `index.html` in a `<style>` tag. For real projects, pick from [these style tools](http://andrewhfarmer.com/how-to-style-react/).
 * No Flux. If you need it - try [Redux](https://github.com/reactjs/redux) or [MobX](https://github.com/mobxjs/mobx)!
-* Webpack is run with the `webpack-dev-server`. There are [other ways to run Webpack](http://andrewhfarmer.com/webpack-hmr-tutorial/).
+* Webpack is run with the `express` and `webpack-dev-middleware`.
 * The 'content base' is set to `www`. Any files in that directory will be served by the webpack server.
-* HMR is supported, so code changes will be noticed automatically.

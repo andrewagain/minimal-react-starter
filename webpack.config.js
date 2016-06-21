@@ -1,36 +1,32 @@
 var path = require('path');
-var webpack = require('webpack');
-var projectRoot = __dirname;
 
 var config = {
-  context: path.join(projectRoot, 'src'),
+  context: path.join(__dirname, 'src'),
   entry: [
-    './index.js',
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080/',
+    './main.js',
   ],
   output: {
-    path: path.join(projectRoot, 'html'),
+    path: path.join(__dirname, 'www'),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel'],
+      },
     ],
   },
   resolveLoader: {
     root: [
-      path.join(projectRoot, 'node_modules'),
+      path.join(__dirname, 'node_modules'),
     ],
   },
   resolve: {
     root: [
-      path.join(projectRoot, 'node_modules'),
+      path.join(__dirname, 'node_modules'),
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
 };
 module.exports = config;
