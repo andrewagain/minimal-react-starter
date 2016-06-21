@@ -6,6 +6,13 @@ A starter project with [React](https://facebook.github.io/react/), [Babel](http:
 This starter is as minimal as possible while still including Babel and Webpack.
 
 
+Create Project
+---
+```
+git clone git@github.com:ahfarmer/minimal-react-starter.git
+```
+
+
 
 Setup
 ---
@@ -54,3 +61,14 @@ More Details
 * No Flux. If you need it - try [Redux](https://github.com/reactjs/redux) or [MobX](https://github.com/mobxjs/mobx)!
 * Webpack is run with the `express` and `webpack-dev-middleware`.
 * The 'content base' is set to `www`. Any files in that directory will be served by the webpack server.
+
+
+
+HMR
+---
+
+HMR is not supported in the master branch for simplicity. If you would like HMR support, you can [see the changes that add HMR support](https://github.com/ahfarmer/minimal-react-starter/compare/hmr) or you can directly clone the HMR branch:
+
+```
+git clone -b hmr git@github.com:ahfarmer/minimal-react-starter.git
+```
