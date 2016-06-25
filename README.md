@@ -32,6 +32,12 @@ Usage
 
 
 
+Build it from Scratch
+---
+Starter projects can be difficult for beginners to use because of all the moving pieces. To help you understand this starter project, there is a [7-step walkthrough](http://andrewhfarmer.com/build-your-own-starter/) showing how to create it from scratch.
+
+
+
 Why Minimal?
 ---
 The primary purpose of this project is **learning.**
