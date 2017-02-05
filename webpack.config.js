@@ -1,6 +1,6 @@
-var path = require('path');
+const path = require('path');
 
-var config = {
+module.exports = {
   context: path.join(__dirname, 'src'),
   entry: [
     './main.js',
@@ -10,23 +10,17 @@ var config = {
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel'],
+        use: ['babel-loader'],
       },
     ],
   },
-  resolveLoader: {
-    root: [
-      path.join(__dirname, 'node_modules'),
-    ],
-  },
   resolve: {
-    root: [
+    modules: [
       path.join(__dirname, 'node_modules'),
     ],
   },
 };
-module.exports = config;
