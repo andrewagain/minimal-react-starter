@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "compile": "webpack",
+    "build": "webpack -p",
     "start": "node server.js"
   },
   "keywords": [
