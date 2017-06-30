@@ -1,6 +1,6 @@
 {
   "name": "minimal-react-starter",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Minimal react starter project",
   "main": "src/index.js",
   "scripts": {
