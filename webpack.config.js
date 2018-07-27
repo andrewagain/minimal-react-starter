@@ -1,9 +1,10 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
   context: path.join(__dirname, "src"),
-  entry: ["./main.js"],
+  entry: ["webpack-hot-middleware/client?path=/__webpack_hmr", "./main.js"],
   output: {
     path: path.join(__dirname, "www"),
     filename: "bundle.js"
@@ -16,5 +17,6 @@ module.exports = {
         use: ["babel-loader"]
       }
     ]
-  }
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };
