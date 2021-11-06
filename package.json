@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "compile": "webpack",
-    "build": "webpack -p",
+    "build": "webpack --mode production",
     "start": "node server.js"
   },
   "keywords": [
